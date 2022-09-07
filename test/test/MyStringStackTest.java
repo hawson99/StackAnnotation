@@ -136,6 +136,13 @@ public class MyStringStackTest extends TestCase {
         } catch (NoSuchElementException e) {  fail ();  }
         assertTrue (stack.isEmpty());
 	}
+
+	@Test
+	public void testFailure() {
+		MyStringStack stack = new MyStringStack();
+		stack.push (s1);
+		assertTrue (stack.isEmpty());
+	}
 	
 	public static junit.framework.Test suite() {
 		TestSuite suite = new TestSuite("Test for default package");
